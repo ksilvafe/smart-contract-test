@@ -1,8 +1,5 @@
-// const { ethers } = require("ethers");
-// const hre = require("hardhat");
-
 const main = async () => {
-    let provider = ethers.getDefaultProvider();
+    let provider = hre.ethers.getDefaultProvider();
     const [deployer] = await hre.ethers.getSigners();
     const accountBalance = await provider.getBalance(deployer.address);
 
